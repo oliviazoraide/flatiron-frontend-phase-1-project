@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reader's Block</title>
-<!-- CSS reset: modern-normalize by sindresorhus
--->
+    <!-- CSS reset: modern-normalize by sindresorhus -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
+    <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- custom javascript -->
     <script defer src="main.js"></script>
 </head>
 <body>
@@ -17,14 +19,15 @@
         <h1>Reader's Block</h1>
     </header>
     <!--header ends-->
+    
     <!--main begins-->
     <main>
-
+        <!--Genre Picker -->
         <section class="search-form">
             <h2>Pick your genre</h2>
             <form action="GET" id="genre-form">
                 <label for="genre-filter">Genre Filter:</label>
-                <select name="genre-filter" id="genre-filter">
+                <select name="genre-filter" id="genre-filter" required>
                     <option value="option 1">option 1</option>
                     <option value="option 2">option 2</option>
                     <option value="option 3">option 3</option>
@@ -35,9 +38,18 @@
 
             </form>
         </section>
+        <section class="main-section">
+            <div class="text-area">
+                <span class="book-title">
+                    The book title will generate here
+                </span>
+            </div>
+            
+        </section>
         <h2>Not sure what to read? Click "Generate"!</h2>
     </main>
     <!--main ends-->
+    
     <!--footer begins-->
     <footer>
         <p>Copyright Olivia Desgrossillier 2023</p>
