@@ -8,10 +8,13 @@ const uniqueGenres = new Set()
 
 
 //Event Listeners:
-//button.addEventListener('click', generateRandomBook)
+genreSelector.addEventListener('change', getRandomBookByGenre)
+button.addEventListener('click', generateRandomBook)
 
-//Callback Functions:
+//Function calls:
 getGenre();
+
+//Functions:
 function getGenre() {
     fetch("https://readers-block.onrender.com/books")
     .then(r => r.json())
@@ -29,14 +32,38 @@ function renderGenreOption(books) {
         option.textContent = book.genre
         genreSelector.append(option)
         }
-    })
-    
+    })    
 }
 
+function getRandomBookByGenre() {
+    const selectedGenre = genreSelector.value 
+    fetch("https://readers-block.onrender.com/books")
+    .then(r => r.json())
+    .then(books => {
+        const filteredBooks = books.filter(book => book.genre === selectedGenre)
+        if(filteredBooks.length === 0) {
+            alert('No books found')
+        }
+        else {
+            const randomFilteredBook = filteredBooks[Math.floor(Math.random() * filteredBooks.length)]
+            displayBook(randomFilteredBook)
+        }
+    })
+    .catch(error => alert(error))
+}
 
+function generateRandomBook() {
+    fetch("https://readers-block.onrender.com/books")
+    .then(r => r.json())
+    .then(books => {
+        const randomBookIndex = Math.floor(Math.random() * books.length)
+        const randomBook = books[randomBookIndex]
+        displayBook(randomBook)
+    })
+    .catch(error => alert(error))
+}
 
-
-
-
-//function generateRandomBook()
-//Fetch:
+function displayBook(book) {
+    bookTitle.textContent = book.title
+    authorName.textContent = book.author
+}
