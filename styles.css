@@ -18,6 +18,10 @@ body {
     border: solid 2px oldlace;
     color:oldlace;
     background-color: #3c1414;
+    padding: 5px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 5px;
     
 }
 
