@@ -35,6 +35,14 @@ body {
     padding: 20px 50px;
 }
 
+.main-section .book-title {
+    font-size: 1.5rem;
+}
+
+.main-section .author-name {
+    font-size: 1.3rem;
+}
+
 #new-book {
     background-color: #704241;
     color: oldlace;
