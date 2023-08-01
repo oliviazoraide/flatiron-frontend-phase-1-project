@@ -1,12 +1,26 @@
 console.log("connected")
 //Variables for code:
-let button = document.querySelector('#new-book');
-let bookTitle = document.querySelector('.book-title');
-let authorName = document.querySelector('.author-name');
+const button = document.querySelector('#new-book');
+const bookTitle = document.querySelector('.book-title');
+const authorName = document.querySelector('.author-name');
+const genreSelector = document.querySelector('#select-genre')
 
-button.addEventListener('click', function() {
-    let random = Math.floor(Math.random() *)
 
-    bookTitle.innerText = 
-    authorName.innerText = 
-})
+//Event Listeners:
+//button.addEventListener('click', generateRandomBook)
+
+//Callback Functions:
+getGenre();
+function getGenre() {
+    fetch("https://readers-block.onrender.com/books")
+    .then(r => r.json())
+    .then(books => books.forEach(books => books["genre"]))
+    .catch(error => alert(error))
+}
+
+
+
+
+
+//function generateRandomBook()
+//Fetch:
