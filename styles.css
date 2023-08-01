@@ -8,16 +8,28 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     text-align: center;
     background-image: url(https://cdn.pixabay.com/photo/2019/02/14/14/38/book-3996723_1280.jpg);
-    background-color: lightgray;
+    background-color: oldlace;
+}
+
+.header {
+    border: solid 2px oldlace;
+    color:oldlace;
+    background-color: #3c1414;
+    
 }
 
 .main-section {
-    background-color: lightgrey;
+    background-color: oldlace;
     border-radius: 10px;
 }
 
 #new-book {
-    background-color: darkslategray;
+    background-color: #704241;
+    color: oldlace;
+    padding: 10px 24px;
+    border-radius: 5px;
+    
 }
