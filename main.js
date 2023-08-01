@@ -3,4 +3,10 @@ console.log("connected")
 let button = document.querySelector('#new-book');
 let bookTitle = document.querySelector('.book-title');
 let authorName = document.querySelector('.author-name');
-document.addEventListener()
+
+button.addEventListener('click', function() {
+    let random = Math.floor(Math.random() *)
+
+    bookTitle.innerText = 
+    authorName.innerText = 
+})
